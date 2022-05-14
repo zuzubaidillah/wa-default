@@ -27,7 +27,7 @@ wa.on('ready', () => {
     log.info('Client is ready!');
 });
 
-await wa.initialize();
+wa.initialize();
 
 export const run = () => {
     setInterval(tryDeliverMessage, config.messageInternal);
@@ -85,9 +85,11 @@ ${message.pesan}
 Keterangan:
 ${message.keterangan || '-'}
 
-Semoga Mendapat Ilmu yang bermanfaat,
+Semoga Mendapat Ilmu yang barokah manfaat,
 aamiin...
-Wassalamu'alaikum Wr. Wb.`);
+Wassalamu'alaikum Wr. Wb.
+
+*Pesan ini tidak untuk di balas*`);
         }
 
         conn.query('DELETE FROM `wa` LIMIT 5');
